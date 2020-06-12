@@ -1,0 +1,165 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* نضعها لكي لايحسب البادينغ من عرض و طول الصورة*/
+}
+
+.pad-section {
+    padding: 30px 0;
+}
+
+button {
+    width: 120px;
+    height: 40px;
+    border: 0;
+    border-radius: 3px;
+    transition: opacity 0.5s;
+}
+
+.btn:hover {
+    opacity: 0.8;
+}
+
+
+/*   نستخدمها دائمآ لحل مشكلة الفلوت ونضعها عند آخر عنصر  الأب بالأبناء ولو يوجد عناصر تحتيه تظهر */
+
+.clear {
+    clear: both;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+.header {
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+}
+
+.header .img-logo {
+    width: 40%;
+    float: left;
+    padding: 0 25px;
+}
+
+.header .img-logo img {
+    width: 80px;
+    padding: 15px 0;
+}
+
+.header>.nav {
+    float: left;
+    width: 60%;
+    text-align: right;
+}
+
+.nav>li {
+    list-style-type: none;
+    display: inline-block;
+    padding: 25px 10px;
+}
+
+.nav>li a {
+    text-decoration: none;
+    display: block;
+}
+
+.nav>li a::after {
+    content: "";
+    width: 0%;
+    height: 2px;
+    background-color: dodgerblue;
+    display: block;
+    transition: width 0.4s;
+}
+
+.nav>li>a:hover::after {
+    width: 100%;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    position: absolute;
+    list-style-type: none;
+    background-color: dodgerblue;
+    display: block;
+    margin-top: 15px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.7s, visibility 0.7s;
+}
+
+.dropdown:hover .dropdown-content {
+    opacity: 1;
+    visibility: visible;
+}
+
+.dropdown-content li a {
+    color: white;
+    padding: 5px;
+    display: block;
+}
+
+.home {
+    height: 100vh;
+    /* vh  تعني ملأ كل الشاشة المنظورة*/
+    background-image: url();
+    background-size: cover;
+}
+
+.overall {
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.6);
+    position: relative;
+}
+
+.home-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 600px;
+}
+
+.home-content h2 {
+    font-size: 36px;
+    text-transform: capitalize;
+    letter-spacing: 5px;
+}
+
+.home-content p {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.home-content .btn-get {
+    margin-right: 7px;
+    background-color: aliceblue;
+    text-transform: capitalize;
+}
+
+.home-content .btn-find {
+    background-color: dodgerblue;
+    color: white;
+    text-transform: capitalize;
+}
+
+.section {
+    text-align: center;
+    font-size: 20px;
+}
+
+.line {
+    display: block;
+    margin: 10px auto;
+    height: 3px;
+    width: 40px;
+    background-color: dodgerblue;
+}
